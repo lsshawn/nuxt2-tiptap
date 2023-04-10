@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-app-bar flat dense class="app-header">
+    <v-app-bar
+      flat
+      dense
+      class="app-header"
+    >
       <v-container class="fill-height py-0">
         <div class="d-flex align-center">
           <router-link to="/">
@@ -11,7 +15,7 @@
               max-height="50"
             />
           </router-link>
-          <h5 class="ma-0">SShawn</h5>
+          <h5 class="ma-0">Logo</h5>
         </div>
 
         <v-spacer />
@@ -44,7 +48,12 @@
       color="yellow darken-3"
     >
       <template v-for="link in links">
-        <v-btn nuxt icon :to="link.route" :key="link.value">
+        <v-btn
+          nuxt
+          icon
+          :to="link.route"
+          :key="link.value"
+        >
           <span>{{ link.text }}</span>
           <v-icon>{{ link.icon }}</v-icon>
         </v-btn>
@@ -67,10 +76,10 @@ export default {
   },
   data() {
     return {
-      activeTab: "home",
+      activeTab: 'home',
       links: [
-        { text: "Home", value: "home", icon: "mdi-home", route: "/" },
-        { text: "About", value: "about", icon: "mdi-person", route: "/about" },
+        { text: 'Home', value: 'home', icon: 'mdi-home', route: '/' },
+        { text: 'About', value: 'about', icon: 'mdi-person', route: '/about' },
       ],
     };
   },
@@ -81,7 +90,7 @@ export default {
   },
   methods: {
     back() {
-      this.$router.push("/");
+      this.$router.push('/');
     },
   },
 };

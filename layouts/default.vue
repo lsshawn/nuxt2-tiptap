@@ -1,6 +1,9 @@
 <template>
   <v-app>
-    <app-menu v-show="mounted" app />
+    <app-menu
+      v-show="mounted"
+      app
+    />
     <v-main>
       <nuxt />
     </v-main>
@@ -10,23 +13,23 @@
 </template>
 
 <script>
-import AppFooter from '~/components/AppFooter.vue'
-import AppMenu from '~/components/AppMenu.vue'
+import AppFooter from '~/components/AppFooter.vue';
+import AppMenu from '~/components/AppMenu.vue';
 
 export default {
   components: {
     AppFooter,
-    AppMenu
+    AppMenu,
   },
   data() {
     return {
-      mounted: false
-    }
+      mounted: false,
+    };
   },
   mounted() {
-    this.mounted = true
-  }
-}
+    this.mounted = true;
+  },
+};
 </script>
 
 <style></style>
